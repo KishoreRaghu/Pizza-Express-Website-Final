@@ -142,6 +142,30 @@ img {vertical-align: middle;}
 
 </div>
 <br>
+  
+  <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 <script>
 var slideIndex = 0;
@@ -161,7 +185,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 4000);
 }
 </script>
 
@@ -230,7 +254,7 @@ function showSlides() {
     </div>
 
     <div class="w3-col l6 w3-padding-large">
-      <img src="https://images.squarespace-cdn.com/content/v1/5690d8237086d72427243ace/1523009472486-P7D7Y2I7F4EV672OS9UG/Rockett_Studio_Restaurant_Interior_Design_Pizzaexpress_Marina_One_Singapore_4.jpg" class="w3-round w3-image w3-opacity-min" style="width:100%">
+      <img src="https://images.squarespace-cdn.com/content/v1/5690d8237086d72427243ace/1523009472486-P7D7Y2I7F4EV672OS9UG/Rockett_Studio_Restaurant_Interior_Design_Pizzaexpress_Marina_One_Singapore_4.jpg" class="w3-round w3-image" style="width:100%">
     </div>
   </div>
 
